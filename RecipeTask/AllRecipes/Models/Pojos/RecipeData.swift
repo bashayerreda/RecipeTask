@@ -7,9 +7,11 @@
 //
 
 import Foundation
-struct  RecipeData : Codable {
-    var from , to ,count : Int
+struct RecipeData : Codable {
+    //var from , to ,count : Int 
     var hits : [Recipe]?
-    var _links : Link?
+    var _links  : Link?
     
 }
+
+

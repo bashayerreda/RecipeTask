@@ -15,20 +15,24 @@ class AllRecipesViewController: UIViewController {
     var searchController : UISearchController?
     var recipes : [Recipe] = [Recipe]()
     var recipeData : RecipeData!
-    var allRecipeViewModel : AllRecipeViewModel!
+     var allRecipeViewModel : AllRecipeViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+          
         self.goToHistory()
         self.FilterCollectionView.delegate = self
         self.FilterCollectionView.dataSource = self
         self.recipieTableView.delegate = self
         self.recipieTableView.dataSource = self
+        
+      
         allRecipeViewModel = AllRecipeViewModel()
         allRecipeViewModel.bindRecipeDataViewModelToView = {
             self.onSuccessUpdateView()
-            
+         
             
         }
+        
     }
     
     

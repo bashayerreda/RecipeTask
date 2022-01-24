@@ -8,5 +8,5 @@
 
 import Foundation
 struct Link : Codable{
-    var next : Next?
+    var next : NextPage?
 }

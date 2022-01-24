@@ -74,7 +74,7 @@ var bindNothingToView : (()->())={}
             self.showError = message
         }
         else if results?.hits?.count != 0{
-            self.recipeData = results
+            self.recipeData.hits?.append(contentsOf:((results?.hits!)!))
                             
         }
         else {

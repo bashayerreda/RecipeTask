@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Next : Codable {
+struct NextPage : Codable {
     var href , title : String?
 }

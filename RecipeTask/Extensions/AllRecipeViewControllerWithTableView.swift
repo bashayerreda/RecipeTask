@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 extension AllRecipesViewController : UITableViewDelegate,UITableViewDataSource{
- 
+     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
     }
@@ -23,6 +23,40 @@ extension AllRecipesViewController : UITableViewDelegate,UITableViewDataSource{
         if let recipeImage = recipes[indexPath.row].recipe!.image{
                   recipeCell?.recipeImage.sd_setImage(with: URL(string: recipeImage))
                }
+        var healthLabels: String = ""
+        if let healthArray = recipes[indexPath.row].recipe!.healthLabels{
+                   for label in healthArray{
+                       healthLabels.append("\(label),")
+                   }
+                recipeCell?.recipeHealthLabel.text = healthLabels
+               }
         return recipeCell!
      }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+      if indexPath.section == tableView.numberOfSections - 1 &&
+indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
+           
+               
+        let nextObj = allRecipeViewModel.recipeData._links?.next
+        let nextPageLink = nextObj?.href
+        allRecipeViewModel.fetchNextPageDataFromNetworkClient(NextPage: nextPageLink!)
+        
+             
+        
+        }
+     
+    }
+   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     let DetailsVc = self.storyboard?.instantiateViewController(withIdentifier: "Details") as! DetailsViewController
+        DetailsVc.recipeData = recipes[indexPath.row].recipe
+            print(recipes)
+    self.navigationController?.pushViewController(DetailsVc, animated: true)
+       
+    }
+ 
+             
 }
+ 
+
+
