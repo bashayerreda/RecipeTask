@@ -37,14 +37,15 @@ extension AllRecipesViewController : UITableViewDelegate,UITableViewDataSource{
 indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
            
                
-        let nextObj = allRecipeViewModel.recipeData._links?.next
-        let nextPageLink = nextObj?.href
-        allRecipeViewModel.fetchNextPageDataFromNetworkClient(NextPage: nextPageLink!)
+        if let next = allRecipeViewModel.recipeData._links?.next{
+        let nextPage = next.href
+        allRecipeViewModel.fetchNextPageDataFromNetworkClient(NextPage: nextPage!)
         
              
         
         }
      
+    }
     }
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
