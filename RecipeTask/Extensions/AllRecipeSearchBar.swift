@@ -44,7 +44,7 @@ extension AllRecipesViewController : UISearchBarDelegate ,SuggestionRecipeSelect
         definesPresentationContext = true
         
         //change cancel button color
-        UIBarButtonItem.appearance(whenContainedInInstancesOf:[UISearchBar.self]).tintColor = UIColor.black
+        UIBarButtonItem.appearance(whenContainedInInstancesOf:[UISearchBar.self]).tintColor = UIColor.purple
         
         
     }
@@ -82,6 +82,7 @@ extension AllRecipesViewController : UISearchBarDelegate ,SuggestionRecipeSelect
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         recipieTableView.isHidden = true
+        noResualtsLabel.isEnabled = true
         noResualtsLabel.isHidden = false
         FilterCollectionView.allowsSelection = false
     }

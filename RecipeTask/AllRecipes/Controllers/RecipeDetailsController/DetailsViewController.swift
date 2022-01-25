@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SafariServices
 class DetailsViewController: UIViewController {
     
     @IBOutlet weak var recipeName: UILabel!
@@ -18,7 +18,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self,action: #selector(share(sender:)))
-        
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.purple
         
         self.recipeIngredientsTable.delegate = self
         self.recipeIngredientsTable.dataSource = self
@@ -35,13 +35,17 @@ class DetailsViewController: UIViewController {
         
     }
     
-    
     @IBAction func goToSafari(_ sender: Any) {
         if let url = URL(string: recipeData.url!) {
-            UIApplication.shared.open(url)
+    let config = SFSafariViewController.Configuration()
+    config.entersReaderIfAvailable = true
+
+    let vc = SFSafariViewController(url: url, configuration: config)
+    present(vc, animated: true)
         }
         
     }
+   
     //share recipe Link only
     /*@objc  func share(sender:UIView){
      let items = [URL(string: recipeData.url!)]

@@ -28,6 +28,9 @@ class AllRecipesViewController: UIViewController {
         historyArray =  defaults.stringArray(forKey: "h") ?? []
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        self.navigationController?.navigationBar.tintColor = .purple
         FilterCollectionView.allowsSelection = false
         
         self.goToHistory()
@@ -44,6 +47,8 @@ class AllRecipesViewController: UIViewController {
             
         }
         allRecipeViewModel.bindViewModelErrorToView = {
+            self.activityIndicator.isHidden = false
+            self.activityIndicator.startAnimating()
             self.onFailure()
         }
         allRecipeViewModel.bindNothingToView = {
