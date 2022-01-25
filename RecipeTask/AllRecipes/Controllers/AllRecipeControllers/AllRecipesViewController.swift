@@ -10,6 +10,8 @@ import UIKit
 
 class AllRecipesViewController: UIViewController {
     
+    @IBOutlet weak var noResualtsLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var recipieTableView: UITableView!
     @IBOutlet weak var FilterCollectionView: UICollectionView!
     var searchController : UISearchController?
@@ -21,7 +23,13 @@ class AllRecipesViewController: UIViewController {
     var SearchResult : String?
     override func viewDidLoad() {
         super.viewDidLoad()
-    historyArray =  defaults.stringArray(forKey: "h") ?? []
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
+        historyArray =  defaults.stringArray(forKey: "h") ?? []
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        FilterCollectionView.allowsSelection = false
+        
         self.goToHistory()
         self.FilterCollectionView.delegate = self
         self.FilterCollectionView.dataSource = self
@@ -35,7 +43,12 @@ class AllRecipesViewController: UIViewController {
             
             
         }
-        
+        allRecipeViewModel.bindViewModelErrorToView = {
+            self.onFailure()
+        }
+        allRecipeViewModel.bindNothingToView = {
+            self.showEmptyResults()
+        }
     }
     
     

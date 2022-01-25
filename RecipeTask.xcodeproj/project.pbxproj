@@ -20,6 +20,7 @@
 		A94B4023279B02800056199E /* AllRecipeViewControllerWithTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94B4022279B02800056199E /* AllRecipeViewControllerWithTableView.swift */; };
 		A94B4027279B043B0056199E /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94B4026279B043B0056199E /* RecipeTableViewCell.swift */; };
 		A94B416E279F39C40084E4BF /* SuggestionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94B416D279F39C40084E4BF /* SuggestionsProtocol.swift */; };
+		A9600A3627A00306005459BE /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9600A3527A00306005459BE /* Alerts.swift */; };
 		A9674481279C297000E16931 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9674480279C297000E16931 /* HistoryTableViewController.swift */; };
 		A9674489279C4F9F00E16931 /* AllRecipeSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9674488279C4F9F00E16931 /* AllRecipeSearchBar.swift */; };
 		A975DC0F279B45750021CC95 /* RecipeSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975DC0E279B45750021CC95 /* RecipeSearchViewModel.swift */; };
@@ -75,6 +76,7 @@
 		A94B4022279B02800056199E /* AllRecipeViewControllerWithTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipeViewControllerWithTableView.swift; sourceTree = "<group>"; };
 		A94B4026279B043B0056199E /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		A94B416D279F39C40084E4BF /* SuggestionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsProtocol.swift; sourceTree = "<group>"; };
+		A9600A3527A00306005459BE /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		A9674480279C297000E16931 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		A9674488279C4F9F00E16931 /* AllRecipeSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipeSearchBar.swift; sourceTree = "<group>"; };
 		A975DC0E279B45750021CC95 /* RecipeSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchViewModel.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				A94B400D279AD0CE0056199E /* ApiConstantNames.swift */,
 				A94B400F279AD2D10056199E /* FilterNames.swift */,
+				A9600A3527A00306005459BE /* Alerts.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A975DC0F279B45750021CC95 /* RecipeSearchViewModel.swift in Sources */,
+				A9600A3627A00306005459BE /* Alerts.swift in Sources */,
 				A94B401B279AE22F0056199E /* Next.swift in Sources */,
 				A9BB97BC279A200F0025C8A3 /* RecipeViewController_collectionView.swift in Sources */,
 				A9B89894279DCAD000F36F73 /* DetailsTableViewEx.swift in Sources */,
