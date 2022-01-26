@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -45,6 +46,16 @@
                BlueprintIdentifier = "A9BB979B2799F7100025C8A3"
                BuildableName = "RecipeTaskUITests.xctest"
                BlueprintName = "RecipeTaskUITests"
+               ReferencedContainer = "container:RecipeTask.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A9BF4A8727A1B980000DB94E"
+               BuildableName = "RecipesTaskUITests.xctest"
+               BlueprintName = "RecipesTaskUITests"
                ReferencedContainer = "container:RecipeTask.xcodeproj">
             </BuildableReference>
          </TestableReference>

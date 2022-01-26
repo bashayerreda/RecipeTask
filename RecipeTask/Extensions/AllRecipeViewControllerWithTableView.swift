@@ -16,6 +16,7 @@ extension AllRecipesViewController : UITableViewDelegate,UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        self.isAccessibilityElement = true
         let recipeCell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as? RecipeTableViewCell
         
         recipeCell?.recipeTitle.text = recipes[indexPath.row].recipe?.label ?? ""

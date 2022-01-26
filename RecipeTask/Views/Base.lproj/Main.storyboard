@@ -11,7 +11,7 @@
         <!--All Recipes View Controller-->
         <scene sceneID="UEx-sb-3I9">
             <objects>
-                <viewController id="Iem-mT-12J" customClass="AllRecipesViewController" customModule="RecipeTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" id="Iem-mT-12J" customClass="AllRecipesViewController" customModule="RecipeTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="we7-C7-BRJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,6 +135,10 @@
                                                 <constraint firstAttribute="bottom" secondItem="0CI-VJ-3tS" secondAttribute="bottom" constant="22" id="lva-he-KbC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" staticText="YES"/>
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="recipeHealthLabel" destination="QgT-28-tRR" id="999-Kt-rIe"/>
                                             <outlet property="recipeImage" destination="0CI-VJ-3tS" id="2aD-dk-nt2"/>
@@ -146,6 +150,10 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" staticText="YES"/>
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="XLJ-6u-Nw6" firstAttribute="trailing" secondItem="xkN-6K-Gos" secondAttribute="trailing" constant="-11" id="YnD-vu-EkY"/>
                             <constraint firstItem="XLJ-6u-Nw6" firstAttribute="bottom" secondItem="xkN-6K-Gos" secondAttribute="bottom" constant="10" id="ZJx-Rd-VbR"/>
@@ -243,6 +251,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" staticText="YES"/>
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="LrI-dJ-7A8" firstAttribute="trailing" secondItem="VIV-ec-dj9" secondAttribute="trailing" id="3DA-Ks-PUf"/>
                             <constraint firstItem="AVb-yc-Hht" firstAttribute="top" secondItem="ZoQ-sw-uxe" secondAttribute="bottom" constant="29" id="C9d-Zf-Gd1"/>
@@ -299,6 +311,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -9,6 +9,9 @@
 import UIKit
 
 class FiltersCollectionViewCell: UICollectionViewCell {
+    override func awakeFromNib() {
+        self.isAccessibilityElement = false
+    }
     
     @IBOutlet weak var filtersNamelabel: UILabel!
 
