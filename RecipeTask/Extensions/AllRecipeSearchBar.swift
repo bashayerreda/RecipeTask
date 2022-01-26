@@ -82,7 +82,6 @@ extension AllRecipesViewController : UISearchBarDelegate ,SuggestionRecipeSelect
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         recipieTableView.isHidden = true
-        noResualtsLabel.isEnabled = true
         noResualtsLabel.isHidden = false
         FilterCollectionView.allowsSelection = false
     }
@@ -116,6 +115,7 @@ extension AllRecipesViewController : UISearchBarDelegate ,SuggestionRecipeSelect
         activityIndicator.stopAnimating()
         noResualtsLabel.isEnabled = true
         recipieTableView.isHidden = true
+    Alert().showAlerts(title: "error", message: allRecipeViewModel.showError, vc: self)
     }
     
     
@@ -123,7 +123,7 @@ extension AllRecipesViewController : UISearchBarDelegate ,SuggestionRecipeSelect
         do {
             let regex = try NSRegularExpression(pattern: ".*[^A-Za-z0-9 ].*", options: [])
             if regex.firstMatch(in:keyWord, options: [], range: NSMakeRange(0, keyWord.count)) != nil {
-                Alert().showAlerts(title: "invalid Inputs", message: "Only english letters are allowed and spaces not allowed", vc: self)
+                Alert().showAlerts(title: "invalid Inputs", message: "Only english letters are allowed ", vc: self)
                 return false
             }
         }
